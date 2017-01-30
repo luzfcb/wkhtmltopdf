@@ -18,4 +18,11 @@
 TEMPLATE = subdirs
 
 CONFIG += ordered
+CONFIG += separate_debug_info
+CONFIG += force_debug_info
 SUBDIRS = src/lib src/pdf src/image
+
+QMAKE_CXXFLAGS_RELEASE += /Zi 
+QMAKE_CXXFLAGS_RELEASE += /Od
+QMAKE_LFLAGS_RELEASE += /DEBUG
+

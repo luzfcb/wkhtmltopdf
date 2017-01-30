@@ -22,8 +22,12 @@ import os, sys, platform, subprocess, build
 PLATFORM_TARGETS = {
     'Windows': ['msvc2015-win64', 'msvc2015-win32'],
     'Darwin':  ['osx-cocoa-x86-64', 'osx-carbon-i386'],
-    'Linux':   ['source-tarball', 'linux-generic-amd64', 'linux-generic-i386',
-                'mingw-w64-cross-win64', 'mingw-w64-cross-win32']
+    'Linux':   ['source-tarball',
+                'linux-generic-amd64',
+                #'linux-generic-i386',
+                #'mingw-w64-cross-win64',
+                #'mingw-w64-cross-win32'
+               ]
 }
 
 def build_target(basedir, target):
